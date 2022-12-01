@@ -1,0 +1,306 @@
+/*================== BASE =================*/
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: auto; padding-bottom: 50px;
+    background-color: #1c1c1c;
+    color: #fff;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    padding: 8px;
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/*================= STYLING START ================*/
+/*================= Navbar Start =================*/
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 20px;
+    background-color: #222;
+}
+
+.navbar .logo__unibi {
+    background-color: #444;
+    padding: 20px;
+    border-radius: 4px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo > img {
+    margin-right: 10px;
+}
+
+.logo > a{
+    font-size: 1rem;
+}
+
+.logo__unibi {
+    outline: none;
+    border: none;
+    margin-right: 20px;
+}
+
+.navbar > span {
+    font-size: 2.75rem;
+    font-family: 'poppins', sans-serif;
+}
+
+/*================= Navbar End =================*/
+
+/*================= Main Content Start ===============*/
+main {
+    display: grid;
+    width: 100%;
+    grid-template-areas:
+        "kiri tengah kanan";
+    grid-gap: 10px;
+    grid-template-columns: 1fr 2fr 1fr;
+    margin-top: 30px;
+    padding-inline: 15px;
+}
+
+.sidebar__left {
+    grid-area: kiri;
+    padding: 8px;
+}
+
+.galeri {
+    margin-top: 10px;
+}
+
+.content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 80px;
+    margin-top: 8px;
+    height: auto;
+    padding: 40px 20px;
+    background-color: #222;
+    grid-area: tengah;
+    border-radius: 4px;
+    font-family: sans-serif;
+    gap: 30px;
+}
+
+.content::after {
+    content: "Load More";
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: auto;
+    padding: 8px 12px;
+    border-radius: 4px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.content::after:hover {
+    background-color: #444;
+}
+
+article {
+    width: 100%;
+    height: auto;
+    background-color: #333;
+    padding: 14px 12px;
+    border-radius: 8px;
+}
+
+.sidebar__right {
+    position: relative;
+    padding: 8px;
+    grid-area: kanan;
+}
+
+.nav-toggle {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 3px;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    background-color: #333;
+    cursor: pointer;
+}
+
+.nav-toggle:hover {
+    background-color: #444;
+}
+
+.nav-toggle > div {
+    width: 20px;
+    height: 3px;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 1px;
+}
+
+#nav-menu{
+    display: none;
+}
+
+#nav-menu.active {
+    display: block;
+    position: absolute;
+    overflow: hidden;
+    background-color: #fcfcfc;
+    width: 250px;
+    height: auto;
+    color: #000;
+    right: 100%;
+    top: 100%;
+    border-radius: 4px;
+}
+
+#nav-menu li {
+    list-style: none;
+    font-weight: medium;
+    padding: 12px 16px;
+}
+
+#nav-menu li:hover {
+    background-color: #f1f1f1;
+}
+
+.sidebar__left a {
+    position: relative;
+    width: max-content;
+    display: block;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-family: sans-serif;
+}
+
+.sidebar__left ul {
+    background-color: #222;
+    border-radius: 4px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 15%);
+    padding: 20px;
+}
+
+.sidebar__left li {
+    width: 100%;
+    position: relative;
+    margin-block: 4px;
+    cursor: pointer;
+}
+
+.sidebar__left a::after {
+    content: '';
+    position: absolute;
+    width: 0; height: 1.7px;
+    bottom: 0; left: 0;
+    background-color: #fff;
+    transition: width ease-in-out 200ms;
+}
+
+.sidebar__left li:hover a {
+    color: #c0ffee;
+}
+
+.sidebar__left li:hover a::after {
+    width: 100%;
+    background-color:#c0ffee;
+}
+
+.picture {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    background-color: #333;
+    border-radius: 3px;
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background-color: #444;
+}
+
+.profile__name {
+    font-size: 1.5rem;
+    font-weight: 500;
+    background-color: #333;
+    margin-top: 22px;
+    padding: 8px 16px;
+    text-align: center;
+    border-radius: 3px;
+}
+
+.article__img {
+    width: 100%;
+    height: 200px;
+    background-color: #444;
+    border-radius: 4px;
+}
+
+.title__article {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-block: 18px;
+}
+/*================= Main Content End =================*/
+/*================= STYLING END ================*/
+
+@media (width <= 1200px) {
+    main {
+        grid-template-areas: 
+        "tengah kanan"
+        "tengah kiri";
+        grid-template-columns:  2fr 1fr;
+        grid-template-rows: 1fr 2fr;
+    }    
+}
+
+@media (width <= 835px){
+    main {
+        grid-template-areas: 
+        "kanan"
+        "tengah"
+        "kiri";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .content {
+        border-radius: 12px;
+        padding: 20px;
+    }
+
+    :is(.sidebar__right, .sidebar__left) {
+        padding: 0;
+    }
+}
